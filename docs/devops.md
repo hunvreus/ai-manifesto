@@ -33,7 +33,7 @@ In Cloudflare:
 9. Set deploy command to `npx wrangler deploy`.
 10. Set `SITE_URL` to `https://ronanberder.com/ai-manifesto/`.
 
-Cloudflare requires the Worker name in the dashboard to match the `name` field in `wrangler.jsonc`.
+Cloudflare requires the Worker name in the dashboard to match the `name` field in `wrangler.jsonc`. Pushes to `main` should trigger a production build once the GitHub repository is connected.
 
 The production route is `ronanberder.com/ai-manifesto*`. The built files are nested under `dist/ai-manifesto/` because Workers Static Assets expects assets to mirror the subpath route.
 
