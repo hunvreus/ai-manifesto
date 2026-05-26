@@ -1,6 +1,6 @@
 # AI-Augmented Software Development Manifesto
 
-We are uncovering better ways of developing software with AI by doing it and helping others do it.
+We are learning better ways of developing software with AI by doing it and helping others do it.
 
 Through this work we have come to value:
 
