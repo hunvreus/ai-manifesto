@@ -1,9 +1,13 @@
 export default function (eleventyConfig) {
   eleventyConfig.ignores.add("dist/**");
   eleventyConfig.ignores.add("node_modules/**");
+  eleventyConfig.addPassthroughCopy({ public: "." });
   eleventyConfig.addGlobalData("layout", "base.njk");
   eleventyConfig.addGlobalData("permalink", "/");
   eleventyConfig.addGlobalData("title", "AI-Augmented Software Development Manifesto");
+  eleventyConfig.addGlobalData("description", "A manifesto for building software with AI without surrendering human taste, judgment, and ownership.");
+  eleventyConfig.addGlobalData("siteUrl", "https://hunvreus.github.io/ai-manifesto/");
+  eleventyConfig.addGlobalData("socialImage", "og.png");
 
   return {
     templateFormats: ["md"],
