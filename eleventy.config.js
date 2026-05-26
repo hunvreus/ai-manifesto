@@ -2,12 +2,12 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("dist/**");
   eleventyConfig.ignores.add("node_modules/**");
   eleventyConfig.ignores.add("docs/**");
-  eleventyConfig.addPassthroughCopy({ public: "." });
+  eleventyConfig.addPassthroughCopy({ public: "ai-manifesto" });
   eleventyConfig.addGlobalData("layout", "base.njk");
-  eleventyConfig.addGlobalData("permalink", "/");
+  eleventyConfig.addGlobalData("permalink", "/ai-manifesto/");
   eleventyConfig.addGlobalData("title", "AI-Augmented Software Development Manifesto");
   eleventyConfig.addGlobalData("description", "A manifesto for building software with AI without surrendering human taste, judgment, and ownership.");
-  eleventyConfig.addGlobalData("siteUrl", process.env.SITE_URL || "https://ai-manifesto.hunvreus.workers.dev/");
+  eleventyConfig.addGlobalData("siteUrl", process.env.SITE_URL || "https://ronanberder.com/ai-manifesto/");
   eleventyConfig.addGlobalData("socialImage", "og.png");
 
   return {

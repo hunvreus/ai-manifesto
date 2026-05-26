@@ -31,9 +31,11 @@ In Cloudflare:
 7. Set root directory to `/`.
 8. Set build command to `npm run build`.
 9. Set deploy command to `npx wrangler deploy`.
-10. Set `SITE_URL` to the production URL if it is not `https://ai-manifesto.hunvreus.workers.dev/`.
+10. Set `SITE_URL` to `https://ronanberder.com/ai-manifesto/`.
 
 Cloudflare requires the Worker name in the dashboard to match the `name` field in `wrangler.jsonc`.
+
+The production route is `ronanberder.com/ai-manifesto*`. The built files are nested under `dist/ai-manifesto/` because Workers Static Assets expects assets to mirror the subpath route.
 
 ## Rollback
 
