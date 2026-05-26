@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A manifesto for AI-augmented software development.">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      @layer reset {
+        *, *::before, *::after { box-sizing: border-box; }
+        *:not(dialog) { margin: 0; }
+        @media (prefers-reduced-motion: no-preference) { html { interpolate-size: allow-keywords; } }
+        body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+        input, button, textarea, select { font: inherit; color: inherit; }
+        textarea { resize: vertical; }
+        p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+        p { text-wrap: pretty; max-width: 75ch; }
+        h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+        ul[role='list'], ol[role='list'] { list-style: none; padding: 0; }
+        #root, #__next { isolation: isolate; }
+      }
+
+      :root {
+        --background: oklch(21.2% 0.019 322.12);
+        --foreground: oklch(86.5% 0.012 325.68);
+        --heading: oklch(96% 0.003 325.6);
+        --border: oklch(43.5% 0.029 321.78);
+        --link-background: oklch(36.4% 0.029 323.89);
+        --link-background-hover: oklch(59.1% 0.293 322.896);
+        --link-foreground: oklch(92.2% 0.005 325.62);
+      }
+
+      body {
+        background: var(--background);
+        color: var(--foreground);
+        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+        isolation: isolate;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      main {
+        max-width: 640px;
+        margin-inline: auto;
+        padding-block: 4rem;
+      }
+
+      a  {
+        background:var(--link-background);
+        color: var(--link-foreground);
+        text-decoration: none;
+        transition: background-color 0.15s ease;
+      }
+
+      a:hover {
+        background:var(--link-background-hover);
+      }
+
+      h1,
+      h2,
+      strong {
+        font-weight: 700;
+        color: var(--heading);
+      }
+
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+      }
+
+      p,
+      ul,
+      ol {
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        border: 1px solid var(--border);
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 0;
+        padding: 0.75rem 1rem;
+      }
+
+      ul li:last-child {
+        border-bottom: 0;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      ol li strong {
+        display: block;
+      }
+
+      dl {
+        border-top: 4px double var(--border);
+
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+        margin-top: 2rem;
+        padding-top: 2rem;
+      }
+
+      dt {
+        font-weight: 800;
+      }
+
+      dd {
+        min-width: 0;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          max-width: none;
+          padding-block: 2rem;
+          padding-inline: 1rem;
+        }
+
+        dl {
+          grid-template-columns: 1fr;
+        }
+
+        dd:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        {{ content | safe }}
+        <dl>
+          <dt>Author</dt>
+          <dd><a href="https://x.com/hunvreus">Ronan Berder</a></dd>
+          <dt>Source</dt>
+          <dd><a href="https://github.com/hunvreus/ai-manifesto">hunvreus/ai-manifesto</a></dd>
+          <dt>Original</dt>
+          <dd><a href="https://agilemanifesto.org/">Manifesto for Agile Software Development</a></dd>
+        </dl>
+      </article>
+    </main>
+  </body>
+</html>
